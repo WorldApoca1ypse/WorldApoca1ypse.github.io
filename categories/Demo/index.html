@@ -390,25 +390,15 @@ When had been writting this ar...
 
     <script defer src="/vendors/aplayer@1.10.1/dist/APlayer.min.js"></script>
     
-    <div id="aplayer"></div>
-    <script>
-    $(() => {
-        $.ajax({
-            type:"get",
-            url:"https://music.163.com/#/playlist?id=96138102",
-            dataType:"json",
-            success: function(data){
-                new APlayer({
-                    container: document.getElementById('aplayer'),
-                    fixed: true,
-                    order: 'random',
-                    lrcType: 3,
-                    audio: data
-                });
-            }
-        });
-    });
-    </script>
+    <script defer src="/vendors/meting@2.0.1/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="96138102"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
 
 
 
